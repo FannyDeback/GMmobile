@@ -18,7 +18,9 @@ show_map = function (id_map) {
 	direction = new google.maps.DirectionsRenderer({
 	    map   : map
 	});
-	map = new google.maps.Map(id_map);
+	map = new google.maps.Map(id_map, {
+		zoom: 8
+	});
 	direction.setMap(map);
 
 	if (navigator.geolocation) {
