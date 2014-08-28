@@ -5,6 +5,8 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="jquery_mobile/css/jquery.mobile-1.4.2.css">
+	<link rel="stylesheet" type="text/css" href="jquery_mobile/css/font.css">
+	<link rel="stylesheet" type="text/css" href="jquery_mobile/css/styles.css">
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
 </head>
@@ -13,58 +15,115 @@
 
 <!-- PAGE DE CONNEXION -->
 <div data-role="page" id="connexion"> 
-	<div data-role="header">
-		<h3>Bienvenue sur le site mobile de Gomobility</h3>
+	<div data-role="header" id="header">
+		<img src="jquery_mobile/images/logo-gomobility.png"/>
 	</div>
 
-	<div data-role="content">
-		<a href="#parcours" data-transition="slide" data-role="button" data-mini="true">Connexion avec votre adresse e-mail</a>
+	<div data-role="content" class="content">
+		<img src="jquery_mobile/images/fond-content.png"/>
+		<a href="#" id="connexion-facebook" data-transition="slide" data-role="button" data-mini="true">
+			<img src="jquery_mobile/images/bouton-facebook.png"/>
+		</a>
+		<a href="#parcours" id="connexion-email" data-transition="slide" data-role="button" data-mini="true">
+			<img src="jquery_mobile/images/picto-gomobility.png"/>
+			<p>Connexion avec email</p>
+			<div class="clear"></div>
+		</a>
 	</div>
 </div>
 
 <!-- PAGE CHOISIR OU PROPOSER PARCOURS -->
 <div data-role="page" id="parcours">
-	<div data-role="header">
-		<h1>Go Mobility</h1>
-		<h3>L'Ardèche eco-responsable</h3>
+	<div data-role="header" id="header-page">
+		<nav>
+			<a href="#">
+				<img src="jquery_mobile/images/navigation.png"/>
+			</a>
+		</nav>
+		<img src="jquery_mobile/images/logo-gomobility-2.png" class="logo-2"/>
+		<div class="clear"></div>
 	</div>
-	<div data-role="content">
-		<a href="#proposer" data-role="button" data-mini="true" data-inline="true">Je propose mon parcours</a>
-		<a href="#choisir" data-role="button" data-mini="true" data-inline="true">Je choisis mon parcours</a>
-		<div>
-			<p>Déjà 12g de CO2 économisés grâce à vous !</p>
+	<div data-role="content" class="content">
+		<img src="jquery_mobile/images/fond-content-2.png"/>
+		<div id="boutons-parcours">
+			<a href="#proposer" data-role="button" data-mini="true" data-inline="true">
+				<img src="jquery_mobile/images/je-propose.png"/>
+				<p>JE PROPOSE<br/>
+				mon parcours</p>
+			</a>
+			<a href="#choisir" data-role="button" data-mini="true" data-inline="true">
+			<img src="jquery_mobile/images/je-choisis.png"/>
+				<p>JE CHOISIS<br/>
+				mon parcours</p>
+			</a>
+			<div class="clear"></div>
+		</div>
+		<div id="grammes-co2">
+			<p>12g</p>
 		</div>
 	</div>
-	<div data-role="footer">
+	<div data-role="footer" class="footer">
+		<img src="jquery_mobile/images/picto-coupe.gif"/>
 		<a href="#jeu" data-role="button" data-mini="true">Participez à notre concours</a>
+		<div class="clear"></div>
 	</div>
 </div>
 
 <!-- PAGE CHOISIR PARCOURS -->
 <div data-role="page" id="choisir">
-	<div data-role="header">
-		<h1>Go Mobility</h1>
-		<h3>L'Ardèche eco-responsable</h3>
+	<div data-role="header" id="header-page">
+		<nav>
+			<a href="#">
+				<img src="jquery_mobile/images/navigation.png"/>
+			</a>
+		</nav>
+		<img src="jquery_mobile/images/logo-gomobility-2.png" class="logo-2"/>
+		<div class="clear"></div>
 	</div>
-	<div data-role="content">
-		<a href="#bonchoix" data-role="button" data-mini="true" data-inline="true">Je propose mon parcours</a>
-		<a href="#choisir" data-role="button" data-mini="true" data-inline="true">Je choisis mon parcours</a>
-		<div>
-			<p>Déjà 12g de CO2 économisés grâce à vous !</p>
+	<div data-role="content" class="content">
+		<img src="jquery_mobile/images/fond-content-2.png"/>
+		<div id="boutons-parcours">
+			<a href="#bonchoix" data-role="button" data-mini="true" data-inline="true">
+				<img src="jquery_mobile/images/je-propose.png"/>
+				<p>JE PROPOSE<br/>
+				mon parcours</p>
+			</a>
+			<a href="#choisir" data-role="button" data-mini="true" data-inline="true">
+			<img src="jquery_mobile/images/je-choisis.png"/>
+				<p>JE CHOISIS<br/>
+				mon parcours</p>
+			</a>
+			<div class="clear"></div>
+		</div>
+		<div id="grammes-co2">
+			<p>12g</p>
 		</div>
 	</div>
-	<div data-role="footer">
+	<div data-role="footer" class="footer">
+		<img src="jquery_mobile/images/picto-coupe.gif"/>
 		<a href="#jeu" data-role="button" data-mini="true">Participez à notre concours</a>
+		<div class="clear"></div>
 	</div>
 </div>
 
 <!-- PAGE BON CHOIX -->
 <div data-role="page" id="bonchoix" data-transition="fadeout">
-	<div data-role="header">
-		<h1>Go Mobility</h1>
+	<div data-role="header" id="header-page">
+		<nav>
+			<a href="#">
+				<img src="jquery_mobile/images/navigation.png"/>
+			</a>
+		</nav>
+		<img src="jquery_mobile/images/logo-gomobility-2.png" class="logo-2"/>
+		<div class="clear"></div>
 	</div>
-	<div data-role="content">
-		C'est trop cool
+	<div data-role="content" class="content">
+		<p>C'est trop cool</p>
+	</div>
+	<div data-role="footer" class="footer">
+		<img src="jquery_mobile/images/picto-coupe.gif"/>
+		<a href="#jeu" data-role="button" data-mini="true">Participez à notre concours</a>
+		<div class="clear"></div>
 	</div>
 </div>
 </body>

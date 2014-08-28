@@ -1,0 +1,151 @@
+.clear{
+	clear: both;
+}
+
+body{
+	font-family: 'ralewayextralight';
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
+
+#header{
+	border:none;
+	background-color: transparent;
+}
+
+#header-page{
+	background: #7ED2EC;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+#header-page img{
+	width: 60%;
+	margin-left: 5%;
+}
+
+#header-page nav{
+	width: 20%;
+	float: left;
+}
+
+#header-page nav img{
+	width: 100%;
+}
+
+#header-page img.logo-2{
+	float: left;
+}
+
+.content{
+	padding: 0;
+	position: relative;
+}
+
+.content p{
+	margin: 10px 0;
+}
+
+.content a#connexion-email{
+	position: absolute;
+	top: 30%;
+	width: 80%;
+	left: 10%;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	background-color: #7FCCE7;
+	display: block;
+	border: none;
+}
+
+.content a#connexion-email img{
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 5px 0;
+	float: left;
+	padding-left: 5%;
+}
+
+.content a#connexion-email p{
+	float: left;
+	font-size: 10pt;
+	height: 30px;
+	line-height: 30px;
+	margin: 5px 0;
+	padding-left: 5%;
+	width: 70%;
+}
+
+.content a#connexion-facebook{
+	position: absolute;
+	top: 17%;
+	width: 80%;
+	left: 10%;
+	padding: 0;
+	margin: 0;
+	height: 50px;
+	display: block;
+	border: none;
+	box-shadow: none;
+}
+
+.content #boutons-parcours{
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+
+.content #boutons-parcours a{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color: #7DD1EB;
+	color: #fff;
+	width: 50%;
+	float: left;
+	border-radius: 0;
+}
+
+.content #grammes-co2{
+	position: absolute;
+}
+
+.footer{
+	background-color: #fff;
+	border:none;
+	height: 60px;
+	border-top: 3px solid #7DD1EB;
+	padding-top: 5px;
+}
+
+.footer img{
+	width: 20%;
+	float: left;
+}
+
+.footer a{
+	background: #fff !important;
+	color: #7DD1EB !important; 
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-shadow: none;
+	height: 60px;
+	line-height: 60px;
+	width: 65%;
+	float: left;
+	text-align: center;
+	font-size: 0.9em !important;
+	padding-left: 5%;
+	text-shadow: none;
+
+	
+}
