@@ -196,6 +196,11 @@ hr{
 	float: right;
 }
 
+.content a.etoile{
+	float: left;
+	width: 20%;
+}
+
 .content a#partager, .content a#go,  .content a#rechercher{
 	width: 100%;
 	height: 50px;
