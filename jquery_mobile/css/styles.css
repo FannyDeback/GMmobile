@@ -11,6 +11,15 @@ img{
 	height: auto;
 }
 
+hr{
+	background-color: #C4C4C4;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	border: 0;
+	height: 1px;
+}
+
 #header{
 	border:none;
 	background-color: transparent;
@@ -28,6 +37,18 @@ img{
 	margin-left: 5%;
 }
 
+#header-page h1{
+	color: #fff;
+	text-shadow: none;
+	font-size: 20px;
+	width: 70%;
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
 #header-page nav{
 	width: 20%;
 	float: left;
@@ -39,6 +60,10 @@ img{
 
 #header-page img.logo-2{
 	float: left;
+}
+
+#header-page img.logo-3{
+	float: right;
 }
 
 .content{
@@ -116,6 +141,99 @@ img{
 
 .content #grammes-co2{
 	position: absolute;
+	color: #fff;
+	text-shadow : 1px 1px #999;
+	font-size: 3em;
+	top: 30%;
+	top: 38%;
+	left: 16%;
+	letter-spacing: 10px;
+	font-weight: bold;
+}
+
+.content h2{
+	color: #666;
+	text-transform: uppercase !important;
+	text-align: center;
+	width: 100%;
+	font-size: 16px;
+}
+
+.content a#velo, .content a#pied, .content a#roller, 
+.content a#bonhomme, .content a#photo,
+.content a#touristique, .content a#sportif,
+.content a#economie, .content a#gastronomie,
+.content a#facile, .content a#moyen,
+.content a#oui{
+	margin-right: 1%;
+}
+
+.content a#velo, .content a#pied, .content a#roller, .content a#bus{
+	width: 24.2%;
+	float: left;
+}
+
+.content a#bonhomme, .content a#photo, .content a#termine,
+.content a#touristique, .content a#sportif, .content a#work,
+.content a#facile, .content a#moyen, .content a#difficile{
+	width: 32.6%;
+	float: left;
+}
+
+.content a#economie, .content a#historique, .content a#gastronomie, .content a#nature,
+.content a#oui, .content a#non{
+	width: 49.5%;
+	float: left;
+}
+
+.content a#bus,
+.content a#termine,
+.content a#work,
+.content a#historique
+.content a#nature,
+.content a#difficile,
+.content a#non{
+	float: right;
+}
+
+.content a#partager, .content a#go,  .content a#rechercher{
+	width: 100%;
+	height: 50px;
+	color: #fff;
+	text-align: center;
+	font-size: 1.5em;
+	line-height: 50px;
+	background : #7DD1EB;
+	display: block;
+	text-decoration: none;
+}
+
+.content.menu{
+	background-color: #f2e6d1;
+}
+
+.content div.col-droite{
+	width: 79%;
+	float: right;
+	background-color: #fff;
+	padding-left: 1%;
+}
+
+.content aside.col-gauche{
+	width: 20%;
+	float: left;
+}
+
+.content aside.col-gauche a{
+	border-bottom: 2px solid #fff;
+	padding: 0;
+	margin: 0;
+	display: block;
+	height: 98px;
+}
+
+.content aside.col-gauche a#workmenu{
+	border-bottom: none;
 }
 
 .footer{

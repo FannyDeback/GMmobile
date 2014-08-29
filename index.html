@@ -38,7 +38,7 @@
 <div data-role="page" id="parcours">
 	<div data-role="header" id="header-page">
 		<nav>
-			<a href="#">
+			<a href="#parcours">
 				<img src="jquery_mobile/images/navigation.png"/>
 			</a>
 		</nav>
@@ -61,7 +61,7 @@
 			<div class="clear"></div>
 		</div>
 		<div id="grammes-co2">
-			<p>12g</p>
+			<p>12</p>
 		</div>
 	</div>
 	<div data-role="footer" class="footer">
@@ -71,31 +71,280 @@
 	</div>
 </div>
 
-<!-- PAGE CHOISIR PARCOURS -->
-<div data-role="page" id="choisir">
+<!-- PAGE PROPOSE PARCOURS -->
+<div data-role="page" id="proposer">
 	<div data-role="header" id="header-page">
 		<nav>
-			<a href="#">
+			<a href="#parcours">
 				<img src="jquery_mobile/images/navigation.png"/>
 			</a>
 		</nav>
-		<img src="jquery_mobile/images/logo-gomobility-2.png" class="logo-2"/>
+		<img src="jquery_mobile/images/header-eco.png" class="logo-3"/>
 		<div class="clear"></div>
 	</div>
 
-	<div data-role="content">
+	<div data-role="content" class="content">
 		<div id="bonchoix">
-			Bon choix on y va
+			<img src="jquery_mobile/images/bon-choix-on-y-va.png"/>
 		</div>
-		<div id="choix" style="display:none;">
-			<div id="map-choix" style="width:200px;height:200px;">
+		<div id="propose" style="display:none;">
+			<img src="jquery_mobile/images/micro.png"/>
+			<h2>Mode de transport</h2>
+			<a href="#" id="velo">
+				<img src="jquery_mobile/images/picto-velo.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-velo.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-velo-selected.png';"/>
+			</a>
+			<a href="#" id="pied">
+				<img src="jquery_mobile/images/picto-pied.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-pied.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-pied-selected.png';"/>
+			</a>
+			<a href="#" id="roller">
+				<img src="jquery_mobile/images/picto-roller.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-roller.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-roller-selected.png';"/>
+			</a>
+			<a href="#" id="bus">
+				<img src="jquery_mobile/images/picto-bus.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-bus.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-bus-selected.png';"/>
+			</a>
+			<div class="clear"></div>
+
+			<div id="map-propose" style="width:100%;height:200px;">
+				<p>Un problème est survenue lors du chargement de la map...</p>
+			</div>
+
+			<a href="#" id="bonhomme">
+				<img src="jquery_mobile/images/picto-bonhomme.png"/>
+			</a>
+			<a href="#" id="photo">
+				<img src="jquery_mobile/images/picto-photo.png"/>
+			</a>
+			<a href="#proposer-2" id="termine">
+				<img src="jquery_mobile/images/picto-termine.png"/>
+			</a>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+
+<!-- PAGE PROPOSE PARCOURS SUITE -->
+<div data-role="page" id="proposer-2">
+	<div data-role="header" id="header-page">
+		<nav>
+			<a href="#parcours">
+				<img src="jquery_mobile/images/navigation.png"/>
+			</a>
+		</nav>
+		<img src="jquery_mobile/images/header-eco.png" class="logo-3"/>
+		<div class="clear"></div>
+	</div>
+
+	<div data-role="content" class="content">
+		<div id="propose2" style="display:none;">
+			<div id="map-propose2" style="width:100%;height:200px;">
 				<p>Un problème est survenue lors du chargement de la map...</p>
 			</div>
 		</div>
+		<h2>Bilan d'effort</h2>
+		<img src="jquery_mobile/images/infos-parcours.png"/>
+		<hr/>
+		<h2>Votre parcours est de type</h2>
+		<a href="#" id="touristique">
+			<img src="jquery_mobile/images/picto-touristique.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-touristique.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-touristique-selected.png';"/>
+		</a>
+		<a href="#" id="sportif">
+			<img src="jquery_mobile/images/picto-sportif.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-sportif.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-sportif-selected.png';"/>
+		</a>
+		<a href="#" id="work">
+			<img src="jquery_mobile/images/picto-work.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-work.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-work-selected.png';"/>
+		</a>
+		<div class="clear"></div>
+		<hr/>
+		<a href="#parcours" id="partager">
+			Partager mon parcours
+		</a>
 	</div>
-	<div data-role="footer" class="footer">
-		<img src="jquery_mobile/images/picto-coupe.gif"/>
-		<a href="#jeu" data-role="button" data-mini="true">Participez à notre concours</a>
+</div>
+
+<!-- PAGE CHOISIS PARCOURS TOURISTIQUE -->
+<div data-role="page" id="choisir">
+	<div data-role="header" id="header-page">
+		<nav>
+			<a href="#parcours">
+				<img src="jquery_mobile/images/navigation.png"/>
+			</a>
+		</nav>
+		<h1>Parcours<br/>touristique</h1>
+		<div class="clear"></div>
+	</div>
+
+	<div data-role="content" class="content menu">
+		<aside class="col-gauche">
+			<a href="#choisir" id="touristiquemenu">
+				<img src="jquery_mobile/images/picto-touristiquemenu.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-touristiquemenu.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-touristiquemenu-selected.png';"/>
+			</a>
+			<a href="#sportif" id="sportifmenu">
+				<img src="jquery_mobile/images/picto-sportifmenu.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-sportifmenu.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-sportifmenu-selected.png';"/>
+			</a>
+			<a href="#work" id="workmenu">
+				<img src="jquery_mobile/images/picto-workmenu.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-workmenu.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-workmenu-selected.png';"/>
+			</a>
+		</aside>
+		<div class="col-droite">
+			<h2>Mode de transport</h2>
+				<a href="#" id="velo">
+					<img src="jquery_mobile/images/picto-velo.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-velo.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-velo-selected.png';"/>
+				</a>
+				<a href="#" id="pied">
+					<img src="jquery_mobile/images/picto-pied.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-pied.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-pied-selected.png';"/>
+				</a>
+				<a href="#" id="roller">
+					<img src="jquery_mobile/images/picto-roller.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-roller.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-roller-selected.png';"/>
+				</a>
+				<a href="#" id="bus">
+					<img src="jquery_mobile/images/picto-bus.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-bus.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-bus-selected.png';"/>
+				</a>
+				<div class="clear"></div>
+			<hr/>
+
+			<h2>Type de parcours</h2>
+			<a href="#" id="economie">
+				<img src="jquery_mobile/images/picto-economie.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-economie.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-economie-selected.png';"/>
+			</a>
+			<a href="#" id="historique">
+				<img src="jquery_mobile/images/picto-historique.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-historique.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-historique-selected.png';"/>
+			</a>
+			<a href="#" id="gastronomie">
+				<img src="jquery_mobile/images/picto-gastronomie.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-gastronomie.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-gastronomie-selected.png';"/>
+			</a>
+			<a href="#" id="nature">
+				<img src="jquery_mobile/images/picto-nature.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-nature.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-nature-selected.png';"/>
+			</a>
+			<div class="clear"></div>
+
+			<hr/>
+
+			<h2>Durée du parcours</h2>
+			<img src="jquery_mobile/images/duree-parcours.png"/>
+			<h2>Distance du parcours</h2>
+			<img src="jquery_mobile/images/distance-parcours.png"/>
+
+			<hr/>
+
+			<h2>Difficulté</h2>
+			<a href="#" id="facile">
+				<img src="jquery_mobile/images/picto-facile.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-facile.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-facile-selected.png';"/>
+			</a>
+			<a href="#" id="moyen">
+				<img src="jquery_mobile/images/picto-moyen.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-moyen.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-moyen-selected.png';"/>
+			</a>
+			<a href="#" id="difficile">
+				<img src="jquery_mobile/images/picto-difficile.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-difficile.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-difficile-selected.png';"/>
+			</a>
+			<div class="clear"></div>
+
+			<h2>Loisirs payants</h2>
+			<a href="#" id="oui">
+				<img src="jquery_mobile/images/picto-oui.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-oui.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-oui-selected.png';"/>
+			</a>
+			<a href="#" id="non">
+				<img src="jquery_mobile/images/picto-non.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-non.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-non-selected.png';"/>
+			</a>
+			<div class="clear"></div>
+			<hr/>
+			<a href="#touristique-suite" id="go">
+				Go
+			</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<!-- PAGE CHOISIS PARCOURS TOURISTIQUE SUITE -->
+<div data-role="page" id="touristique-suite">
+	<div data-role="header" id="header-page">
+		<nav>
+			<a href="#parcours">
+				<img src="jquery_mobile/images/navigation.png"/>
+			</a>
+		</nav>
+		<h1>Parcours<br/>touristique</h1>
+		<div class="clear"></div>
+	</div>
+
+	<div data-role="content" class="content menu">
+		<aside class="col-gauche">
+			<a href="#choisir" id="touristiquemenu">
+				<img src="jquery_mobile/images/picto-touristiquemenu.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-touristiquemenu.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-touristiquemenu-selected.png';"/>
+			</a>
+			<a href="#sportif" id="sportifmenu">
+				<img src="jquery_mobile/images/picto-sportifmenu.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-sportifmenu.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-sportifmenu-selected.png';"/>
+			</a>
+			<a href="#work" id="workmenu">
+				<img src="jquery_mobile/images/picto-workmenu.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-workmenu.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-workmenu-selected.png';"/>
+			</a>
+		</aside>
+		<div class="col-droite">
+			<div id="map-touristique" style="display:none;">
+				<div id="maptouristique" style="width:100%;height:200px;">
+					<p>Un problème est survenue lors du chargement de la map...</p>
+				</div>
+			</div>
+			<img src="jquery_mobile/images/liste-parcours.png"/>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<!-- PAGE CHOISIS PARCOURS WORK -->
+<div data-role="page" id="work">
+	<div data-role="header" id="header-page">
+		<nav>
+			<a href="#parcours">
+				<img src="jquery_mobile/images/navigation.png"/>
+			</a>
+		</nav>
+		<h1>Go to<br/>work</h1>
+		<div class="clear"></div>
+	</div>
+
+	<div data-role="content" class="content menu">
+		<aside class="col-gauche">
+			<a href="#choisir" id="touristiquemenu">
+				<img src="jquery_mobile/images/picto-touristiquemenu.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-touristiquemenu.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-touristiquemenu-selected.png';"/>
+			</a>
+			<a href="#sportif" id="sportifmenu">
+				<img src="jquery_mobile/images/picto-sportifmenu.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-sportifmenu.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-sportifmenu-selected.png';"/>
+			</a>
+			<a href="#work" id="workmenu">
+				<img src="jquery_mobile/images/picto-workmenu.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-workmenu.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-workmenu-selected.png';"/>
+			</a>
+		</aside>
+		<div class="col-droite">
+			<h2>On va où</h2>
+			<img src="jquery_mobile/images/depart-arrivee.png"/>
+
+			<hr/>
+
+			<h2>Heure de départ</h2>
+			<img src="jquery_mobile/images/heure-depart.png"/>
+
+			<hr/>
+
+			<h2>Mode de transport</h2>
+			<a href="#" id="velo">
+				<img src="jquery_mobile/images/picto-velo.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-velo.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-velo-selected.png';"/>
+			</a>
+			<a href="#" id="pied">
+				<img src="jquery_mobile/images/picto-pied.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-pied.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-pied-selected.png';"/>
+			</a>
+			<a href="#" id="roller">
+				<img src="jquery_mobile/images/picto-roller.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-roller.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-roller-selected.png';"/>
+			</a>
+			<a href="#" id="bus">
+				<img src="jquery_mobile/images/picto-bus.png" onmouseout="javascript:this.src='jquery_mobile/images/picto-bus.png';" onmouseover="javascript:this.src='jquery_mobile/images/picto-bus-selected.png';"/>
+			</a>
+			<div class="clear"></div>
+			<hr/>
+			<a href="#" id="rechercher">
+				Rechercher
+			</a>
+		</div>
 		<div class="clear"></div>
 	</div>
 </div>
@@ -105,8 +354,8 @@
 		// $("#choisis").on("click", function() {
 			setTimeout(function() {
 				$("#bonchoix").hide();
-				$("#choix").show();
-				show_map(document.getElementById("map-choix"));
+				$("#propose").show();
+				show_map(document.getElementById("map-propose"));
 			}, 500);
 		// });
 	});
