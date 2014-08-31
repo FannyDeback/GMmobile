@@ -36,3 +36,53 @@ show_map = function (id_map) {
 		});
 	}
 }
+
+show_marker = function (id_map, i) {
+	direction = new google.maps.DirectionsRenderer({
+	    map   : map
+	});
+
+	if (i == 4)
+	{
+		map = new google.maps.Map(id_map, {
+			zoom: 8,
+			center: new google.maps.LatLng(44.759629,4.562443)
+		});
+		direction.setMap(map);
+
+		new google.maps.Marker({
+			position: new google.maps.LatLng(44.735269,4.599039),
+			map: map,
+			title: 'Privas, France'
+		});
+		new google.maps.Marker({
+			position: new google.maps.LatLng(44.9061,4.423175),
+			map: map,
+			title: '07160 Le Cheylard, France'
+		});
+		new google.maps.Marker({
+			position: new google.maps.LatLng(44.448413,4.307094),
+			map: map,
+			title: 'Labeaume, France'
+		});
+		new google.maps.Marker({
+			position: new google.maps.LatLng(44.446962,4.41779),
+			map: map,
+			title: 'Lagorce, France'
+		});
+	}
+	else
+	{
+		map = new google.maps.Map(id_map, {
+			zoom: 8,
+			center: new google.maps.LatLng(44.446962,4.41779)
+		});
+		direction.setMap(map);
+
+		new google.maps.Marker({
+			position: new google.maps.LatLng(44.446962,4.41779),
+			map: map,
+			title: 'Lagorce, France'
+		});
+	}
+}
