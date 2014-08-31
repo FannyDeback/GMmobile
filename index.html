@@ -425,6 +425,14 @@
 			}, 500);
 		// });
 	});
+
+	$('div[data-role="page"]').live("swiperight", function(){
+	var prevpage = $(this).prev('div[data-role="page"]');
+	if (prevpage.length > 0) {
+	$.mobile.changePage(prevpage, {transition: "slide",
+	reverse: true}, true, true);
+	}
+	});
 </script>
 </body>
 </html>
