@@ -48,7 +48,7 @@
 	<div data-role="content" class="content">
 		<img src="jquery_mobile/images/fond-content-2.png"/>
 		<div id="boutons-parcours">
-			<a href="#proposer" data-role="button" data-mini="true" data-inline="true">
+			<a id="parcours-proposer" href="#proposer" data-role="button" data-mini="true" data-inline="true">
 				<img src="jquery_mobile/images/je-propose.png"/>
 				<p>JE PROPOSE<br/>
 				mon parcours</p>
@@ -84,10 +84,7 @@
 	</div>
 
 	<div data-role="content" class="content">
-		<div id="bonchoix">
-			<img src="jquery_mobile/images/bon-choix-on-y-va.png"/>
-		</div>
-		<div id="propose" style="display:none;">
+		<div id="propose">
 			<img src="jquery_mobile/images/micro.png"/>
 			<h2>Mode de transport</h2>
 			<a href="#" id="velo">
@@ -105,7 +102,7 @@
 			<div class="clear"></div>
 
 			<div id="map-propose" style="width:100%;height:200px;">
-				<p>Un problème est survenue lors du chargement de la map...</p>
+				<p>Chargement de la map en cours...</p>
 			</div>
 
 			<a href="#" id="bonhomme">
@@ -135,9 +132,9 @@
 	</div>
 
 	<div data-role="content" class="content">
-		<div id="propose2" style="display:none;">
+		<div id="propose2">
 			<div id="map-propose2" style="width:100%;height:200px;">
-				<p>Un problème est survenue lors du chargement de la map...</p>
+				<p>Chargement de la map en cours...</p>
 			</div>
 		</div>
 		<h2>Bilan d'effort</h2>
@@ -155,7 +152,7 @@
 		</a>
 		<div class="clear"></div>
 		<hr/>
-		<a href="#parcours" id="partager">
+		<a href="#planete" id="partager-propose">
 			Partager mon parcours
 		</a>
 	</div>
@@ -247,7 +244,7 @@
 			</a>
 			<div class="clear"></div>
 			<hr/>
-			<a href="#touristique-suite" id="go">
+			<a href="#touristique-suite" id="go-touristique-suite">
 				Go
 			</a>
 		</div>
@@ -280,14 +277,12 @@
 			</a>
 		</aside>
 		<div class="col-droite">
-			<div id="map-touristique" style="display:none;">
-				<div id="maptouristique" style="width:100%;height:200px;">
-					<p>Un problème est survenue lors du chargement de la map...</p>
-				</div>
+			<div id="map-touristique" style="width:100%;height:200px;">
+					<p>Chargement de la map en cours...</p>
 			</div>
 			<img src="jquery_mobile/images/liste-parcours.png"/>
 			<hr/>
-			<a href="#bilan" id="go">
+			<a href="#bilan" id="go-bilan">
 				Ok
 			</a>
 		</div>
@@ -308,6 +303,9 @@
 	</div>
 
 	<div data-role="content" class="content menu">
+		<div id="bonchoix-work">
+			<img src="jquery_mobile/images/bon-choix-on-y-va.png"/>
+		</div>
 		<aside class="col-gauche">
 			<a href="#choisir" id="touristiquemenu">
 				<img src="jquery_mobile/images/picto-touristiquemenu.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-touristiquemenu-selected.png';"/>
@@ -366,64 +364,115 @@
 	</div>
 
 	<div data-role="content" class="content">
-		<div id="map-touristique" style="display:none;">
-			<div id="maptouristique" style="width:100%;height:200px;">
-				<p>Un problème est survenue lors du chargement de la map...</p>
-			</div>
+		<div id="bonchoix">
+			<img src="jquery_mobile/images/bon-choix-on-y-va.png"/>
 		</div>
-		<h2>Bilan d'effort</h2>
-		<img src="jquery_mobile/images/infos-parcours.png"/>
+		<div id="bilan-content" style="display:none;">
+			
+			<div id="map-bilan" style="width:100%;height:200px;">
+				<p>Chargement de la map en cours...</p>
+			</div>
+			<h2>Bilan d'effort</h2>
+			<img src="jquery_mobile/images/infos-parcours.png"/>
 
-		<hr/>
+			<hr/>
 
-		<h2>Comment était-ce ?</h2>
-		<a href="#" id="facile">
-			<img src="jquery_mobile/images/picto-facile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-facile-selected.png';"/>
-		</a>
-		<a href="#" id="moyen">
-			<img src="jquery_mobile/images/picto-moyen.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-moyen-selected.png';"/>
-		</a>
-		<a href="#" id="difficile">
-			<img src="jquery_mobile/images/picto-difficile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-difficile-selected.png';"/>
-		</a>
+			<h2>Comment était-ce ?</h2>
+			<a href="#" id="facile">
+				<img src="jquery_mobile/images/picto-facile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-facile-selected.png';"/>
+			</a>
+			<a href="#" id="moyen">
+				<img src="jquery_mobile/images/picto-moyen.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-moyen-selected.png';"/>
+			</a>
+			<a href="#" id="difficile">
+				<img src="jquery_mobile/images/picto-difficile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-difficile-selected.png';"/>
+			</a>
+			<div class="clear"></div>
+
+			<hr/>
+
+			<h2>Votre avis</h2>
+			<a href="#" class="etoile">
+				<img src="jquery_mobile/images/picto-etoile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-etoile-selected.png';"/>
+			</a>
+			<a href="#" class="etoile">
+				<img src="jquery_mobile/images/picto-etoile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-etoile-selected.png';"/>
+			</a>
+			<a href="#" class="etoile">
+				<img src="jquery_mobile/images/picto-etoile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-etoile-selected.png';"/>
+			</a>
+			<a href="#" class="etoile">
+				<img src="jquery_mobile/images/picto-etoile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-etoile-selected.png';"/>
+			</a>
+			<a href="#" class="etoile">
+				<img src="jquery_mobile/images/picto-etoile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-etoile-selected.png';"/>
+			</a>
+			<div class="clear"></div>
+
+			<hr/>
+			<a href="#planete" id="partager-choisir">
+				Partager mes expériences
+			</a>
+		</div>
+	</div>
+</div>
+
+<!-- REMERCIEMENT -->
+<div data-role="page" id="planete">
+	<div data-role="header" id="header-page">
+		<nav>
+			<a href="#parcours">
+				<img src="jquery_mobile/images/navigation.png"/>
+			</a>
+		</nav>
+		<img src="jquery_mobile/images/header-eco.png" class="logo-3"/>
 		<div class="clear"></div>
+	</div>
 
-		<hr/>
-
-		<h2>Votre avis</h2>
-		<a href="#" class="etoile">
-			<img src="jquery_mobile/images/picto-etoile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-etoile-selected.png';"/>
-		</a>
-		<a href="#" class="etoile">
-			<img src="jquery_mobile/images/picto-etoile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-etoile-selected.png';"/>
-		</a>
-		<a href="#" class="etoile">
-			<img src="jquery_mobile/images/picto-etoile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-etoile-selected.png';"/>
-		</a>
-		<a href="#" class="etoile">
-			<img src="jquery_mobile/images/picto-etoile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-etoile-selected.png';"/>
-		</a>
-		<a href="#" class="etoile">
-			<img src="jquery_mobile/images/picto-etoile.png" onmousemove="javascript:this.src='jquery_mobile/images/picto-etoile-selected.png';"/>
-		</a>
-		<div class="clear"></div>
-
-		<hr/>
-		<a href="#parcours" id="partager">
-			Partager mon parcours
-		</a>
+	<div data-role="content" class="content">
+		<img src="jquery_mobile/images/la-planete-vous-remercie.png" />
 	</div>
 </div>
 
 <script type="text/javascript">
 	$(document).ready(function () {
-		// $("#choisis").on("click", function() {
+		$("#parcours-proposer").on("click", function() {
+			setTimeout(function() {
+				show_map(document.getElementById("map-propose"));
+			}, 1000);
+		});
+		$("#termine").on("click", function() {
+			setTimeout(function() {
+				show_map(document.getElementById("map-propose2"));
+			}, 1000);
+		});
+
+		$("#go-touristique-suite").on("click", function() {
+			setTimeout(function() {
+				show_marker(document.getElementById("map-touristique"), 4);
+			}, 1000);
+		});
+		$("#go-bilan").on("click", function() {
 			setTimeout(function() {
 				$("#bonchoix").hide();
-				$("#propose").show();
-				show_map(document.getElementById("map-propose"));
-			}, 500);
-		// });
+				$("#bilan-content").show();
+				show_marker(document.getElementById("map-bilan"), 1);
+			}, 3000);
+		});
+
+
+		$("#partager-propose, #partager-choisir").on("click", function() {
+			setTimeout(function() {
+				$("#bonchoix").show();
+				$("#bilan-content").hide();
+				window.location.replace("index.html#parcours");
+			}, 3000);
+		});
+
+		$("#parcours").on("click", function() {
+			$("#bonchoix").show();
+			$("#bilan-content").hide();
+		});
 	});
 
 	$('div[data-role="page"]').live("swiperight", function(){
