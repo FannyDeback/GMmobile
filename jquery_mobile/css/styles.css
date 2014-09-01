@@ -71,6 +71,10 @@ hr{
 	position: relative;
 }
 
+.content img#content-2-img{
+	margin-bottom: -5px;
+}
+
 .content p{
 	margin: 10px 0;
 }
